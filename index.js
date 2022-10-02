@@ -1,8 +1,5 @@
 const contacts = require("./contacts");
 
-// const { Command } = require("commander");
-// const program = new Command();
-
 const { program } = require("commander");
 program
   .option("-a, --action <type>", "choose action")
@@ -41,13 +38,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", id: "3" });
-// invokeAction({
-//   action: "add",
-//   name: "Lucas Drago",
-//   email: "mail@gmail.com",
-//   phone: "(044) 206-2688",
-// });
-// invokeAction({ action: "remove", id: "cdf8446d-f0fa-4454-be1d-fa36b32c807b" });
 invokeAction(argv);
